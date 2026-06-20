@@ -192,28 +192,57 @@ def answer_question(reader_client: OpenAI, reader_model: str,
 # Dataset loading (standalone, doesn't import MABench code)
 # ---------------------------------------------------------------------------
 
-def load_mab_dataset(mab_repo: str, sub_dataset: str, max_samples: int = 0):
-    """Load dataset from HuggingFace cache or local MABench repo."""
-    try:
-        from datasets import load_dataset
-        ds = load_dataset("ai-hyz/MemoryAgentBench", split="data")
-        items = [item for item in ds if item.get("sub_dataset") == sub_dataset
-                 or sub_dataset in str(item.get("source", ""))]
-        if not items:
-            items = list(ds)
-        print(f"  Loaded {len(items)} items from HuggingFace")
-    except Exception as e:
-        print(f"  HuggingFace load failed ({e}), trying local...")
-        data_path = os.path.join(mab_repo, "data", f"{sub_dataset}.json")
-        if os.path.exists(data_path):
-            with open(data_path) as f:
-                items = json.load(f)
-            if isinstance(items, dict) and "data" in items:
-                items = items["data"]
-            print(f"  Loaded {len(items)} items from local file")
-        else:
-            print(f"  ERROR: cannot find dataset at {data_path}")
+def load_mab_dataset(data_dir: str, sub_dataset: str, max_samples: int = 0):
+    """Load dataset from local JSON files exported from HuggingFace.
+
+    Data files are organized as: data_dir/{split_name}.json
+    Each file contains a list of items with: context, questions, answers, source
+    Items are filtered by sub_dataset matching the 'source' field.
+    """
+    items = []
+
+    # Try loading from local JSON files (exported format)
+    json_files = [f for f in os.listdir(data_dir) if f.endswith(".json")] if os.path.isdir(data_dir) else []
+
+    if json_files:
+        for jf in json_files:
+            with open(os.path.join(data_dir, jf)) as f:
+                split_items = json.load(f)
+            for item in split_items:
+                source = item.get("source", "")
+                if sub_dataset in source or source in sub_dataset:
+                    items.append(item)
+        print(f"  Loaded {len(items)} items matching '{sub_dataset}' from {len(json_files)} files")
+    else:
+        # Fallback: try HuggingFace
+        try:
+            from datasets import load_dataset
+            ds = load_dataset("ai-hyz/MemoryAgentBench")
+            for split_name in ds.keys():
+                for item in ds[split_name]:
+                    source = item.get("metadata", {}).get("source", "") if item.get("metadata") else ""
+                    if sub_dataset in source or source in sub_dataset:
+                        items.append({
+                            "context": item["context"],
+                            "questions": item["questions"],
+                            "answers": item["answers"],
+                            "source": source,
+                        })
+            print(f"  Loaded {len(items)} items matching '{sub_dataset}' from HuggingFace")
+        except Exception as e:
+            print(f"  ERROR: no local data in {data_dir} and HuggingFace failed: {e}")
             sys.exit(1)
+
+    if not items:
+        print(f"  ERROR: no items found matching sub_dataset='{sub_dataset}'")
+        print(f"  Available sources in data dir:")
+        for jf in json_files:
+            with open(os.path.join(data_dir, jf)) as f:
+                split_items = json.load(f)
+            sources = set(it.get("source", "") for it in split_items)
+            for s in sorted(sources):
+                print(f"    {jf}: {s}")
+        sys.exit(1)
 
     if max_samples > 0:
         items = items[:max_samples]
@@ -285,11 +314,14 @@ def process_single_context(context_text: str, queries: list, answers: list,
         if (i + 1) % 50 == 0:
             print(f"    ... {i+1}/{len(chunks)} chunks appended")
 
-    # Step 3: Consolidate
-    print("  [3/4] Consolidating...")
-    t0 = time.time()
-    consolidate_sync(args.lycheemem_url, session_id)
-    print(f"    Consolidate took {time.time()-t0:.0f}s")
+    # Step 3: Consolidate (or skip)
+    if args.skip_consolidate:
+        print("  [3/4] Skipping consolidate (raw_turn mode)...")
+    else:
+        print("  [3/4] Consolidating...")
+        t0 = time.time()
+        consolidate_sync(args.lycheemem_url, session_id)
+        print(f"    Consolidate took {time.time()-t0:.0f}s")
 
     # Step 4: Wait for search
     wait_search_ready(args.lycheemem_url)
@@ -321,11 +353,11 @@ def process_single_context(context_text: str, queries: list, answers: list,
 
 def main():
     parser = argparse.ArgumentParser(description="MemoryAgentBench runner for LycheeMem")
-    parser.add_argument("--mab_repo", type=str, default="~/MemoryAgentBench",
-                        help="Path to cloned MemoryAgentBench repo (for local data fallback)")
-    parser.add_argument("--dataset", type=str, default="eventqa_full",
-                        help="Sub-dataset name (eventqa_full, ruler_qa1, fact_mh, etc.)")
-    parser.add_argument("--max_samples", type=int, default=5,
+    parser.add_argument("--data_dir", type=str, default="./data",
+                        help="Directory containing exported JSON data files")
+    parser.add_argument("--dataset", type=str, default="factconsolidation_mh_6k",
+                        help="Sub-dataset source name to filter by")
+    parser.add_argument("--max_samples", type=int, default=0,
                         help="Max contexts to evaluate (0=all)")
     parser.add_argument("--chunk_size", type=int, default=4096,
                         help="Chunk size in characters for splitting context")
@@ -334,16 +366,16 @@ def main():
     parser.add_argument("--reader_model", type=str, default="my-llm-qwen")
     parser.add_argument("--top_k", type=int, default=15)
     parser.add_argument("--output_dir", type=str, default="results")
+    parser.add_argument("--skip_consolidate", action="store_true",
+                        help="Skip consolidate step, search raw turns directly")
     args = parser.parse_args()
-
-    args.mab_repo = os.path.expanduser(args.mab_repo)
 
     # Init reader LLM
     reader_client = OpenAI(base_url=args.reader_url, api_key="dummy")
 
     # Load dataset
     print(f"Loading dataset: {args.dataset}")
-    items = load_mab_dataset(args.mab_repo, args.dataset, args.max_samples)
+    items = load_mab_dataset(args.data_dir, args.dataset, args.max_samples)
 
     # Process each context
     all_results = []
