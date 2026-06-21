@@ -1,0 +1,2802 @@
+[
+ {
+  "conv": "1",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.3333333333333333,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 1/3"
+ },
+ {
+  "conv": "1",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.25,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: YES\nCRITERION_4: NO\nSCORE: 1/4"
+ },
+ {
+  "conv": "1",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.25,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 1/4"
+ },
+ {
+  "conv": "1",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.2,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO"
+ },
+ {
+  "conv": "1",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "1",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "1",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "1",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "10",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "1",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "1",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "10",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "10",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "1",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "10",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "10",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "1",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "10",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "10",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "10",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "10",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "10",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "10",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.4,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: NO\nCRITERION_5: N"
+ },
+ {
+  "conv": "10",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "10",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "10",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.3333333333333333,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: YES\nCRITERION_5: N"
+ },
+ {
+  "conv": "11",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "10",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "10",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "10",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "10",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "11",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "10",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "10",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "11",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "11",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "11",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "11",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "11",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "11",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "11",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "11",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.4,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nCRITERION_3: YES\nCRITERION_4: NO\nCRITERION_5: N"
+ },
+ {
+  "conv": "11",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "11",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "11",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.16666666666666666,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO"
+ },
+ {
+  "conv": "11",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "11",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "11",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "11",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "12",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "11",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "12",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "12",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "11",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.8,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: NO\nCRITERION_5: "
+ },
+ {
+  "conv": "11",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.16666666666666666,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO"
+ },
+ {
+  "conv": "12",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "12",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "12",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "12",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "12",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "12",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "12",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.3333333333333333,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: NO\nCRITERION_4: YES\nCRITERION_5: N"
+ },
+ {
+  "conv": "12",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.14285714285714285,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: YES\nCRITERION_4: NO\nCRITERION_5: NO"
+ },
+ {
+  "conv": "12",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "12",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "12",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "12",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: YES\nCRITERION_5:"
+ },
+ {
+  "conv": "12",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: YES\nCRITERION_5:"
+ },
+ {
+  "conv": "12",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "13",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "13",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "12",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "12",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "12",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "13",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "13",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "13",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "13",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "13",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.4,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: YES\nCRITERION_5: N"
+ },
+ {
+  "conv": "13",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nSCORE: 1/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "13",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "14",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "14",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "13",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "13",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "13",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "14",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "14",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "14",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "14",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "14",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "14",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "14",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "14",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "14",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "14",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "14",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.3333333333333333,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: YES\nCRITERION_5: NO"
+ },
+ {
+  "conv": "14",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "14",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "14",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "14",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "14",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "14",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "15",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "14",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "15",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "15",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 2/4"
+ },
+ {
+  "conv": "15",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "15",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "15",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "15",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "15",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "15",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "15",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "16",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "16",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "15",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.2,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO"
+ },
+ {
+  "conv": "15",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "16",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "16",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.25,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 1/4"
+ },
+ {
+  "conv": "16",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "16",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "16",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.25,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 1/4"
+ },
+ {
+  "conv": "16",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "16",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.5,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nSCORE: 1/2"
+ },
+ {
+  "conv": "16",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "17",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "16",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nSCORE: 1/2"
+ },
+ {
+  "conv": "17",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "17",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "17",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "16",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "17",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "17",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "17",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "17",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "17",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "17",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "17",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "17",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "17",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "17",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "17",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "18",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "18",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "17",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "17",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "17",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "17",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "17",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "18",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "18",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "18",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.25,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 1/4"
+ },
+ {
+  "conv": "18",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "18",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "18",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "18",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "18",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "18",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "18",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "18",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "18",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "18",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nSCORE: 1/2"
+ },
+ {
+  "conv": "18",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "18",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "19",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "18",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "19",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "18",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "19",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "18",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: YES\nCRITERION_5:"
+ },
+ {
+  "conv": "19",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "19",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "19",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: YES\nCRITERION_5:"
+ },
+ {
+  "conv": "19",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "19",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "19",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "2",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "2",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "2",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "19",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "19",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "2",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "19",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "2",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "2",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "2",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nSCORE: 3/3"
+ },
+ {
+  "conv": "2",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "2",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "2",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "2",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "2",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.2,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: YES\nCRITERION_4: NO\nCRITERION_5: NO"
+ },
+ {
+  "conv": "2",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.6666666666666666,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nCRITERION_3: YES\nSCORE: 2/3"
+ },
+ {
+  "conv": "2",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "2",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "2",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: NO\nCRITERION_2: YES\nSCORE: 1/2"
+ },
+ {
+  "conv": "20",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "20",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "20",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "2",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "2",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "2",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "20",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "20",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "2",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "20",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "20",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "20",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "20",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "20",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: YES\nSCORE: 4/4"
+ },
+ {
+  "conv": "20",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.4,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: YES\nCRITERION_4: YES\nCRITERION_5: N"
+ },
+ {
+  "conv": "20",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "20",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "20",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "20",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "20",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "20",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "20",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "3",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "3",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "20",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "3",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "20",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "3",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "3",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "3",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "3",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "3",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "3",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "3",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "3",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "3",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "3",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "3",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "4",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "3",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "4",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "3",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "3",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "3",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "3",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "3",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "4",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.25,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: YES\nCRITERION_4: NO\nSCORE: 1/4"
+ },
+ {
+  "conv": "4",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "4",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "4",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "4",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "4",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "4",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "4",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "4",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "4",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "4",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "4",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "4",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "4",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "4",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "4",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "5",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "4",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "4",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "5",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "5",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "5",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "5",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "5",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "5",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "6",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "6",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "6",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "5",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "5",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "6",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "6",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "6",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nSCORE: 3/3"
+ },
+ {
+  "conv": "6",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "6",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "6",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "6",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "6",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "6",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "6",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "6",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "7",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "7",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "6",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: YES\nSCORE: 4/4"
+ },
+ {
+  "conv": "6",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.6666666666666666,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: NO\nSCORE: 2/3"
+ },
+ {
+  "conv": "6",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "6",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "7",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "7",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "empty"
+ },
+ {
+  "conv": "6",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "7",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "7",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "7",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "7",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "7",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "6",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "7",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "7",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.2,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: YES\nCRITERION_5: NO"
+ },
+ {
+  "conv": "7",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "7",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "7",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "7",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "7",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "7",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "8",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "7",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "7",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "7",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.8,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: NO\nCRITERION_5: "
+ },
+ {
+  "conv": "8",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "8",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "8",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "8",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "8",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "8",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "8",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nSCORE: 2/2"
+ },
+ {
+  "conv": "8",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "9",
+  "qtype": "abstention",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "8",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "9",
+  "qtype": "abstention",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "8",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "8",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "9",
+  "qtype": "instruction_following",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "9",
+  "qtype": "contradiction_resolution",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "9",
+  "qtype": "information_extraction",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "9",
+  "qtype": "instruction_following",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "9",
+  "qtype": "contradiction_resolution",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nSCORE: 0/4"
+ },
+ {
+  "conv": "9",
+  "qtype": "information_extraction",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nSCORE: 0/3"
+ },
+ {
+  "conv": "9",
+  "qtype": "knowledge_update",
+  "idx": 0,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "9",
+  "qtype": "event_ordering",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "9",
+  "qtype": "event_ordering",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ },
+ {
+  "conv": "9",
+  "qtype": "knowledge_update",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nSCORE: 0/1"
+ },
+ {
+  "conv": "9",
+  "qtype": "preference_following",
+  "idx": 1,
+  "score": 1.0,
+  "raw": "CRITERION_1: YES\nSCORE: 1/1"
+ },
+ {
+  "conv": "9",
+  "qtype": "preference_following",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "9",
+  "qtype": "multi_session_reasoning",
+  "idx": 1,
+  "score": 0.6666666666666666,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: NO\nSCORE: 2/3"
+ },
+ {
+  "conv": "9",
+  "qtype": "temporal_reasoning",
+  "idx": 0,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nSCORE: 0/2"
+ },
+ {
+  "conv": "9",
+  "qtype": "temporal_reasoning",
+  "idx": 1,
+  "score": 0.5,
+  "raw": "CRITERION_1: YES\nCRITERION_2: NO\nSCORE: 1/2"
+ },
+ {
+  "conv": "9",
+  "qtype": "multi_session_reasoning",
+  "idx": 0,
+  "score": 0.8,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: YES\nCRITERION_5:"
+ },
+ {
+  "conv": "9",
+  "qtype": "summarization",
+  "idx": 0,
+  "score": 0.8,
+  "raw": "CRITERION_1: YES\nCRITERION_2: YES\nCRITERION_3: YES\nCRITERION_4: YES\nCRITERION_5:"
+ },
+ {
+  "conv": "9",
+  "qtype": "summarization",
+  "idx": 1,
+  "score": 0.0,
+  "raw": "CRITERION_1: NO\nCRITERION_2: NO\nCRITERION_3: NO\nCRITERION_4: NO\nCRITERION_5: NO\n"
+ }
+]
