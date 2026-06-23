@@ -132,12 +132,17 @@ Server path: `/home/ldf/benchmark_lycheemem/PersonaMemV2`.
 
 - `outputs/official_userfinal_k20_h0_h9_q5_summary.json`: LycheeMem, 32k,
   first 10 histories x 5 questions, `top_k=20`: `28/50 = 0.560`.
-- `outputs/pmv2_replay_h0_h9_q5_query_raw_options_k20_summary.json`:
-  LycheeMem replay, 32k, first 10 histories x 5 questions, `top_k=20`,
-  `search_mode=query_raw_options`: `30/50 = 0.600`. Treat as a parameter
-  screen; the first 140 rows of the 200-question replay regressed to
-  `66/140 = 0.471`, so this should not be used as a headline config unless the
-  completed 200-question result recovers.
+- First 40 histories x 5 questions, 32k text MCQ, same rows, Qwen reader:
+  - `query`, `top_k=20`: `93/200 = 0.465`.
+  - `query`, `top_k=50`: `98/200 = 0.490`; row-level comparison vs
+    `query/top_k=20`: net `+5` questions (`25` wins, `20` losses, `155` ties).
+  - `query_raw`, `top_k=20`: `88/200 = 0.440`.
+  - `query_raw_options`, `top_k=20`: `86/200 = 0.430`. This looked strong on
+    the first 50 questions (`30/50 = 0.600`) but regressed badly at 200, so do
+    not use it as a headline config.
+- Current best clean screened config is `query/top_k=50`, but the gain is small
+  and still below the PersonaMem-v2 agentic-memory paper anchor, so it needs
+  another 200-question ablation before scaling to 500+ questions.
 - `outputs/baseline_none_h0_h3_q5_official_userfinal/summary.json`: no-memory
   baseline on first 4 histories x 5 questions: `4/20 = 0.200`.
 - `outputs/baseline_system_h0_h3_q5_official_userfinal/summary.json`: system
