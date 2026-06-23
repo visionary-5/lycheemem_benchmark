@@ -82,6 +82,16 @@ BASE_TEMPLATES = {
         "memorize": 'Dialogue between User and Assistant {time_stamp} \\n<User> The following context is the book I have read: \n{context}\n <Assistant> I have read the book and I will answer the question you ask.',
         "query": "Based on the context you memorized, answer the question below. You are required to answer the question based on the strict output format.\n\n {question} \n\n",
     },
+    "infbench_sum": {
+        "system": SYSTEM_MESSAGE,
+        "memorize": 'Dialogue between User and Assistant {time_stamp} \\n<User> The following context is the book/story I have read: \n{context}\n <Assistant> I have read it and I will answer the question you ask.',
+        "query": "Based on the context you memorized, complete the task below:\n\n{question}",
+    },
+    "recsys": {
+        "system": SYSTEM_MESSAGE,
+        "memorize": 'Dialogue between User and Assistant {time_stamp} \\n<User> The following context is the movie recommendation conversation and catalog: \n{context}\n <Assistant> I have memorized it and I will answer the question you ask.',
+        "query": "{question}",
+    },
 }
 
 DATASET_MAPPING = {
@@ -91,6 +101,8 @@ DATASET_MAPPING = {
     ("longmemeval_",): "longmemeval",
     ("factconsolidation_",): "factconsolidation",
     ("detective",): "detective_qa",
+    ("infbench_sum",): "infbench_sum",
+    ("recsys",): "recsys",
 }
 
 
@@ -231,7 +243,11 @@ def calculate_metrics(prediction, ground_truths):
 def post_process(output_text: str, answer, sub_dataset: str):
     """Dataset-specific post-processing → (metrics_dict, info_dict)."""
     if "icl" in sub_dataset:
-        parsed = parse_output(output_text)
+        # ICL query asks the model to emit 'label: {label}'. The default parse prefix
+        # is 'Answer:', which leaves the 'label:' prefix in place -> exact_match never
+        # matches the bare numeric gold (e.g. 'label: 50' vs '50'). Parse on 'label:'
+        # to recover the official intent (compare the numeric label only).
+        parsed = parse_output(output_text, prefix="label:")
         return calculate_metrics(parsed, answer), {"parsed_output": parsed}
     elif "eventqa" in sub_dataset:
         recall = sum(a.lower() in output_text.lower() for a in answer) / len(answer)
@@ -470,6 +486,9 @@ def process_context(context_idx: int, item: dict, args, llm_client: OpenAI):
         questions = [questions]
     if isinstance(answers, str):
         answers = [answers]
+    if getattr(args, "max_questions", 0) and args.max_questions > 0:
+        questions = questions[: args.max_questions]
+        answers = answers[: args.max_questions]
 
     session_id = f"mab_{args.sub_dataset}_{context_idx}"
     memorize_tpl = get_memorize_template(args.sub_dataset)
@@ -536,6 +555,8 @@ def main():
     parser.add_argument("--sub_dataset", type=str, default="eventqa_full",
                         help="Sub-dataset source filter")
     parser.add_argument("--max_test_samples", type=int, default=5)
+    parser.add_argument("--max_questions", type=int, default=0,
+                        help="If >0, only answer the first N questions per context (口径 validation)")
     parser.add_argument("--chunk_size", type=int, default=4096, help="Tokens per chunk (MABench default)")
     parser.add_argument("--retrieve_num", type=int, default=100, help="Top-K for search (MABench mem0 default)")
     parser.add_argument("--lycheemem_url", type=str, default="http://localhost:8000")
