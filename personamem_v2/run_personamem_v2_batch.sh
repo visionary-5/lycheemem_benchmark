@@ -2,7 +2,7 @@
 # Run PersonaMem-v2 isolated slices in parallel workers.
 #
 # Usage:
-#   bash run_personamem_v2_batch.sh START_HISTORY END_HISTORY MAX_Q SIZE TOP_K PORT_BASE WORKERS [BATCH_ID] [MAX_CONTEXT_CHARS] [SEARCH_MODE] [PROMPT_MODE] [GPU_ID]
+#   bash run_personamem_v2_batch.sh START_HISTORY END_HISTORY MAX_Q SIZE TOP_K PORT_BASE WORKERS [BATCH_ID] [MAX_CONTEXT_CHARS] [SEARCH_MODE] [PROMPT_MODE] [GPU_ID] [MEMORY_POLICY] [INGEST_MODE]
 #
 # END_HISTORY is inclusive. Existing outputs/<run_id>/summary.json files are
 # skipped so the batch can be resumed safely.
@@ -20,6 +20,8 @@ MAX_CONTEXT_CHARS=${9:-0}
 SEARCH_MODE=${10:-query}
 PROMPT_MODE=${11:-qwen_user_final}
 GPU_ID=${12:-}
+MEMORY_POLICY=${13:-standard}
+INGEST_MODE=${14:-turns}
 
 ROOT=/home/ldf/benchmark_lycheemem/PersonaMemV2
 LOG_DIR="$ROOT/batch_logs/$BATCH_ID"
@@ -28,7 +30,7 @@ mkdir -p "$LOG_DIR"
 source /home/ldf/anaconda3/etc/profile.d/conda.sh
 conda activate lycheemem
 
-echo "[batch] id=$BATCH_ID start=$START_HISTORY end=$END_HISTORY max_q=$MAX_Q size=$SIZE top_k=$TOP_K search_mode=$SEARCH_MODE prompt_mode=$PROMPT_MODE workers=$WORKERS max_context_chars=$MAX_CONTEXT_CHARS gpu_id=${GPU_ID:-<default>}"
+echo "[batch] id=$BATCH_ID start=$START_HISTORY end=$END_HISTORY max_q=$MAX_Q size=$SIZE top_k=$TOP_K search_mode=$SEARCH_MODE prompt_mode=$PROMPT_MODE memory_policy=$MEMORY_POLICY ingest_mode=$INGEST_MODE workers=$WORKERS max_context_chars=$MAX_CONTEXT_CHARS gpu_id=${GPU_ID:-<default>}"
 echo "[batch] logs=$LOG_DIR"
 
 run_worker() {
@@ -46,6 +48,12 @@ run_worker() {
     if [ "$PROMPT_MODE" != "qwen_user_final" ]; then
       run_id="${run_id}_${PROMPT_MODE}"
     fi
+    if [ "$MEMORY_POLICY" != "standard" ]; then
+      run_id="${run_id}_mp${MEMORY_POLICY}"
+    fi
+    if [ "$INGEST_MODE" != "turns" ]; then
+      run_id="${run_id}_ing${INGEST_MODE}"
+    fi
     local out_dir="$ROOT/outputs/$run_id"
     local log="$LOG_DIR/worker${worker_id}_h${h}.log"
 
@@ -55,7 +63,7 @@ run_worker() {
     fi
 
     echo "[worker $worker_id] start h=$h run_id=$run_id port=$port" | tee -a "$LOG_DIR/worker${worker_id}.log"
-    if bash "$ROOT/run_personamem_v2_isolated.sh" "$run_id" "$h" 1 "$MAX_Q" "$SIZE" "$port" "$TOP_K" "$MAX_CONTEXT_CHARS" "$SEARCH_MODE" "$PROMPT_MODE" "$GPU_ID" > "$log" 2>&1; then
+    if bash "$ROOT/run_personamem_v2_isolated.sh" "$run_id" "$h" 1 "$MAX_Q" "$SIZE" "$port" "$TOP_K" "$MAX_CONTEXT_CHARS" "$SEARCH_MODE" "$PROMPT_MODE" "$GPU_ID" "$MEMORY_POLICY" "$INGEST_MODE" > "$log" 2>&1; then
       echo "[worker $worker_id] done h=$h" | tee -a "$LOG_DIR/worker${worker_id}.log"
     else
       code=$?
@@ -92,12 +100,16 @@ batch_id = "$BATCH_ID"
 search_mode = "$SEARCH_MODE"
 max_context_chars = "$MAX_CONTEXT_CHARS"
 prompt_mode = "$PROMPT_MODE"
+memory_policy = "$MEMORY_POLICY"
+ingest_mode = "$INGEST_MODE"
 files = [
     str(root / "outputs" / (
         f"pmv2_h{h}_q{max_q}_official_userfinal_k{top_k}"
         + (f"_{search_mode}" if search_mode != "query" else "")
         + (f"_c{max_context_chars}" if max_context_chars != "0" else "")
         + (f"_{prompt_mode}" if prompt_mode != "qwen_user_final" else "")
+        + (f"_mp{memory_policy}" if memory_policy != "standard" else "")
+        + (f"_ing{ingest_mode}" if ingest_mode != "turns" else "")
     ) / "predictions.jsonl")
     for h in range(start, end + 1)
     if (root / "outputs" / (
@@ -105,6 +117,8 @@ files = [
         + (f"_{search_mode}" if search_mode != "query" else "")
         + (f"_c{max_context_chars}" if max_context_chars != "0" else "")
         + (f"_{prompt_mode}" if prompt_mode != "qwen_user_final" else "")
+        + (f"_mp{memory_policy}" if memory_policy != "standard" else "")
+        + (f"_ing{ingest_mode}" if ingest_mode != "turns" else "")
     ) / "predictions.jsonl").exists()
 ]
 summary = root / "outputs" / f"{batch_id}_summary.json"

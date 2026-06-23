@@ -72,7 +72,7 @@ The replay wrapper accepts optional trailing parameters:
 ```bash
 bash run_personamem_v2_replay.sh \
   DB_RUN_ID OUT_RUN_ID HISTORY_START MAX_Q SIZE PORT SEARCH_MODE MAX_HISTORIES \
-  TOP_K MAX_CONTEXT_CHARS PROMPT_MODE GPU_ID
+  TOP_K MAX_CONTEXT_CHARS PROMPT_MODE GPU_ID MEMORY_POLICY
 ```
 
 For example, pin a replay worker to GPU 2:
@@ -83,6 +83,10 @@ bash run_personamem_v2_replay.sh \
   pmv2_h0_q5_query_raw_k20_gpu2 \
   0 5 32k 8010 query_raw 1 20 0 qwen_user_final 2
 ```
+
+`MEMORY_POLICY=strict_forget` is a diagnostic reader policy that treats
+forget/set-aside constraints as hard negatives. It should be reported as a
+prompt-policy ablation, not mixed into the conservative headline result.
 
 Search modes:
 
@@ -112,6 +116,13 @@ python compare_personamem_v2_runs.py \
   --run 'query=outputs/pmv2_h*_q5_official_userfinal_k20/predictions.jsonl' \
   --run 'raw_options=outputs/pmv2_h*_q5_official_userfinal_query_raw_options_k20/predictions.jsonl'
 ```
+
+Fresh-ingest runs can also pass `INGEST_MODE=transcript_chunks` as the final
+argument to `run_personamem_v2_isolated.sh` or `run_personamem_v2_batch.sh`.
+This ingests each chunk as a role-labeled transcript segment while preserving
+the same benchmark history content. It is intended to test whether implicit
+preferences embedded in drafts or assistant restatements are missed by the
+default turn-based ingestion.
 
 Reader baselines:
 

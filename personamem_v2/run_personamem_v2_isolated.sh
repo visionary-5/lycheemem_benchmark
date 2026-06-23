@@ -2,7 +2,7 @@
 # Start an isolated LycheeMem process and run a PersonaMem-v2 slice.
 #
 # Usage:
-#   bash run_personamem_v2_isolated.sh RUN_ID HISTORY_START MAX_HISTORIES MAX_Q_PER_HISTORY SIZE [PORT] [TOP_K] [MAX_CONTEXT_CHARS] [SEARCH_MODE] [PROMPT_MODE] [GPU_ID]
+#   bash run_personamem_v2_isolated.sh RUN_ID HISTORY_START MAX_HISTORIES MAX_Q_PER_HISTORY SIZE [PORT] [TOP_K] [MAX_CONTEXT_CHARS] [SEARCH_MODE] [PROMPT_MODE] [GPU_ID] [MEMORY_POLICY] [INGEST_MODE]
 #
 # This script does not remove the main lycheemem_code/data directory. It writes
 # per-run DB/vector/log files under ./lychee_runs/RUN_ID and stops only the
@@ -20,6 +20,8 @@ MAX_CONTEXT_CHARS=${8:-0}
 SEARCH_MODE=${9:-query}
 PROMPT_MODE=${10:-qwen_user_final}
 GPU_ID=${11:-}
+MEMORY_POLICY=${12:-standard}
+INGEST_MODE=${13:-turns}
 
 ROOT=/home/ldf/benchmark_lycheemem/PersonaMemV2
 LM_DIR=/home/ldf/benchmark_lycheemem/BEAM/lycheemem_code
@@ -93,7 +95,9 @@ PYTHONHASHSEED=0 python -u run_personamem_v2_lycheemem.py \
   --max_context_chars "$MAX_CONTEXT_CHARS" \
   --turns_per_session 12 \
   --ingest_workers 4 \
+  --ingest_mode "$INGEST_MODE" \
   --search_mode "$SEARCH_MODE" \
   --prompt_mode "$PROMPT_MODE" \
+  --memory_policy "$MEMORY_POLICY" \
   --output_dir "$ROOT/outputs" \
   --run_id "$RUN_ID"

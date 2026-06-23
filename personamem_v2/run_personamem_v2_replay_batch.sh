@@ -2,7 +2,7 @@
 # Replay PersonaMem-v2 answer-time experiments over already-ingested runs.
 #
 # Usage:
-#   bash run_personamem_v2_replay_batch.sh START_HISTORY END_HISTORY MAX_Q SIZE TOP_K SEARCH_MODE PORT_BASE WORKERS [BATCH_ID] [MAX_CONTEXT_CHARS] [PROMPT_MODE] [GPU_ID]
+#   bash run_personamem_v2_replay_batch.sh START_HISTORY END_HISTORY MAX_Q SIZE TOP_K SEARCH_MODE PORT_BASE WORKERS [BATCH_ID] [MAX_CONTEXT_CHARS] [PROMPT_MODE] [GPU_ID] [MEMORY_POLICY]
 #
 # END_HISTORY is inclusive. This does not re-ingest histories. It reuses
 # lychee_runs/pmv2_h{h}_q{MAX_Q}_official_userfinal_k20 when available, and
@@ -21,6 +21,7 @@ BATCH_ID=${9:-pmv2_replay_h${START_HISTORY}_h${END_HISTORY}_q${MAX_Q}_${SIZE}_${
 MAX_CONTEXT_CHARS=${10:-0}
 PROMPT_MODE=${11:-qwen_user_final}
 GPU_ID=${12:-}
+MEMORY_POLICY=${13:-standard}
 
 ROOT=/home/ldf/benchmark_lycheemem/PersonaMemV2
 LOG_DIR="$ROOT/batch_logs/$BATCH_ID"
@@ -29,7 +30,7 @@ mkdir -p "$LOG_DIR"
 source /home/ldf/anaconda3/etc/profile.d/conda.sh
 conda activate lycheemem
 
-echo "[replay-batch] id=$BATCH_ID start=$START_HISTORY end=$END_HISTORY max_q=$MAX_Q size=$SIZE top_k=$TOP_K search_mode=$SEARCH_MODE prompt_mode=$PROMPT_MODE workers=$WORKERS max_context_chars=$MAX_CONTEXT_CHARS gpu_id=${GPU_ID:-<default>}"
+echo "[replay-batch] id=$BATCH_ID start=$START_HISTORY end=$END_HISTORY max_q=$MAX_Q size=$SIZE top_k=$TOP_K search_mode=$SEARCH_MODE prompt_mode=$PROMPT_MODE memory_policy=$MEMORY_POLICY workers=$WORKERS max_context_chars=$MAX_CONTEXT_CHARS gpu_id=${GPU_ID:-<default>}"
 echo "[replay-batch] logs=$LOG_DIR"
 
 db_run_id_for_history() {
@@ -64,6 +65,9 @@ run_worker() {
     if [ "$PROMPT_MODE" != "qwen_user_final" ]; then
       run_id="${run_id}_${PROMPT_MODE}"
     fi
+    if [ "$MEMORY_POLICY" != "standard" ]; then
+      run_id="${run_id}_mp${MEMORY_POLICY}"
+    fi
     local out_dir="$ROOT/outputs/$run_id"
     local log="$LOG_DIR/worker${worker_id}_h${h}.log"
 
@@ -73,7 +77,7 @@ run_worker() {
     fi
 
     echo "[worker $worker_id] start h=$h db=$db_run_id run_id=$run_id port=$port" | tee -a "$LOG_DIR/worker${worker_id}.log"
-    if bash "$ROOT/run_personamem_v2_replay.sh" "$db_run_id" "$run_id" "$h" "$MAX_Q" "$SIZE" "$port" "$SEARCH_MODE" 1 "$TOP_K" "$MAX_CONTEXT_CHARS" "$PROMPT_MODE" "$GPU_ID" > "$log" 2>&1; then
+    if bash "$ROOT/run_personamem_v2_replay.sh" "$db_run_id" "$run_id" "$h" "$MAX_Q" "$SIZE" "$port" "$SEARCH_MODE" 1 "$TOP_K" "$MAX_CONTEXT_CHARS" "$PROMPT_MODE" "$GPU_ID" "$MEMORY_POLICY" > "$log" 2>&1; then
       echo "[worker $worker_id] done h=$h" | tee -a "$LOG_DIR/worker${worker_id}.log"
     else
       code=$?
@@ -109,6 +113,7 @@ search_mode = "$SEARCH_MODE"
 batch_id = "$BATCH_ID"
 max_context_chars = "$MAX_CONTEXT_CHARS"
 prompt_mode = "$PROMPT_MODE"
+memory_policy = "$MEMORY_POLICY"
 files = []
 for h in range(start, end + 1):
     run_id = f"pmv2_h{h}_q{max_q}_official_userfinal_{search_mode}_k{top_k}"
@@ -116,6 +121,8 @@ for h in range(start, end + 1):
         run_id = f"{run_id}_c{max_context_chars}"
     if prompt_mode != "qwen_user_final":
         run_id = f"{run_id}_{prompt_mode}"
+    if memory_policy != "standard":
+        run_id = f"{run_id}_mp{memory_policy}"
     path = root / "outputs" / run_id / "predictions.jsonl"
     if path.exists():
         files.append(str(path))

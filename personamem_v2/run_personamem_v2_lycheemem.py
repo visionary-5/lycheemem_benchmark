@@ -283,16 +283,28 @@ def build_reader_messages(
     option_text: str,
     *,
     prompt_mode: str,
+    memory_policy: str,
 ) -> list[dict[str, str]]:
     if not context.strip():
         context = "(No relevant memory found)"
     instruction = build_mcq_instruction(option_text)
+    policy = ""
+    if memory_policy == "strict_forget":
+        policy = (
+            "\n\nMemory-use policy: If the memory context says the user asked to forget, "
+            "set aside, omit, or not remember a preference or fact, treat that as a hard "
+            "negative constraint. Do not choose an option that relies on the forgotten "
+            "information; prefer an otherwise suitable generic or updated option."
+        )
+    elif memory_policy != "standard":
+        raise ValueError(f"Unknown memory_policy: {memory_policy}")
     memory_message = {
         "role": "system",
         "content": (
             "Relevant conversation history has been compressed into the memory context below. "
             "Use it as the available conversation context for personalization.\n\n"
             f"{context}"
+            f"{policy}"
         ),
     }
     if prompt_mode == "qwen_user_final":
@@ -381,6 +393,16 @@ def group_messages(
     return prefix + groups
 
 
+def transcript_message(group: list[dict[str, str]]) -> dict[str, str]:
+    lines = ["Conversation transcript segment. Preserve the facts, preferences, constraints, and user requests expressed anywhere in this segment."]
+    for msg in group:
+        role = str(msg.get("role") or "user").upper()
+        content = str(msg.get("content") or "").strip()
+        if content:
+            lines.append(f"{role}: {content}")
+    return {"role": "user", "content": "\n\n".join(lines)}
+
+
 def ingest_history(
     url: str,
     history_key: str,
@@ -390,14 +412,22 @@ def ingest_history(
     separate_system_session: bool,
     ingest_workers: int,
     session_date_start: date,
+    ingest_mode: str,
 ) -> dict[str, Any]:
     groups = group_messages(
         messages,
         turns_per_session,
         separate_system_session=separate_system_session,
     )
+    if ingest_mode == "transcript_chunks":
+        groups = [
+            group if len(group) == 1 and group[0].get("role") == "system" else [transcript_message(group)]
+            for group in groups
+        ]
+    elif ingest_mode != "turns":
+        raise ValueError(f"Unknown ingest_mode: {ingest_mode}")
     base = f"pmv2_{stable_id(history_key, 10)}"
-    print(f"  [ingest] {len(messages)} messages -> {len(groups)} sessions", flush=True)
+    print(f"  [ingest] {len(messages)} messages -> {len(groups)} sessions mode={ingest_mode}", flush=True)
 
     def ingest_group(item: tuple[int, list[dict[str, str]]]) -> dict[str, Any]:
         idx, group = item
@@ -421,6 +451,7 @@ def ingest_history(
         "message_count": len(messages),
         "session_count": len(groups),
         "separate_system_session": separate_system_session,
+        "ingest_mode": ingest_mode,
         "elapsed_sec": time.time() - t0,
         "consolidations": results,
     }
@@ -499,6 +530,7 @@ def answer_row(
     search_mode: str,
     max_context_chars: int,
     prompt_mode: str,
+    memory_policy: str,
 ) -> dict[str, Any]:
     question = official_question(row)
     raw_query = raw_question(row)
@@ -514,7 +546,13 @@ def answer_row(
     context = search_resp.get("raw_retrieved_context") or ""
     if max_context_chars and len(context) > max_context_chars:
         context = context[:max_context_chars]
-    messages = build_reader_messages(context, question, option_text, prompt_mode=prompt_mode)
+    messages = build_reader_messages(
+        context,
+        question,
+        option_text,
+        prompt_mode=prompt_mode,
+        memory_policy=memory_policy,
+    )
     response = call_reader(client, model, messages)
     pred_letter = extract_answer_letter(response, option_mapping)
     is_correct = pred_letter == correct_letter
@@ -544,6 +582,7 @@ def answer_row(
         "top_k": top_k,
         "max_context_chars": max_context_chars,
         "prompt_mode": prompt_mode,
+        "memory_policy": memory_policy,
         "option_seed_mode": "official_python_hash",
     }
 
@@ -584,6 +623,7 @@ def main() -> None:
     ap.add_argument("--turns_per_session", type=int, default=12)
     ap.add_argument("--separate_system_session", action=argparse.BooleanOptionalAction, default=True)
     ap.add_argument("--ingest_workers", type=int, default=4)
+    ap.add_argument("--ingest_mode", choices=["turns", "transcript_chunks"], default="turns")
     ap.add_argument("--lycheemem_url", default="http://localhost:8000")
     ap.add_argument("--reader_url", default="http://10.251.171.6:28043/v1")
     ap.add_argument("--reader_model", default="my-llm-qwen")
@@ -594,6 +634,11 @@ def main() -> None:
         "--prompt_mode",
         choices=["qwen_user_final", "official_system_final"],
         default="qwen_user_final",
+    )
+    ap.add_argument(
+        "--memory_policy",
+        choices=["standard", "strict_forget"],
+        default="standard",
     )
     ap.add_argument(
         "--search_mode",
@@ -656,6 +701,8 @@ def main() -> None:
                 "rows": len(rows),
                 "histories": history_keys,
                 "prompt_mode": args.prompt_mode,
+                "memory_policy": args.memory_policy,
+                "ingest_mode": args.ingest_mode,
                 "search_mode": args.search_mode,
                 "top_k": args.top_k,
                 "max_context_chars": args.max_context_chars,
@@ -692,6 +739,7 @@ def main() -> None:
                 separate_system_session=args.separate_system_session,
                 ingest_workers=args.ingest_workers,
                 session_date_start=date(2024, 1, 1),
+                ingest_mode=args.ingest_mode,
             )
             (out_dir / f"ingest_{stable_id(history_key)}.json").write_text(
                 json.dumps(ingest_stats, ensure_ascii=False, indent=2),
@@ -715,6 +763,7 @@ def main() -> None:
                         search_mode=args.search_mode,
                         max_context_chars=args.max_context_chars,
                         prompt_mode=args.prompt_mode,
+                        memory_policy=args.memory_policy,
                     )
                     result["error"] = ""
                 except Exception as exc:

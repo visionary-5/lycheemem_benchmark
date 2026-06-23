@@ -3,7 +3,7 @@
 # answering without re-ingesting history.
 #
 # Usage:
-#   bash run_personamem_v2_replay.sh DB_RUN_ID OUT_RUN_ID HISTORY_START MAX_Q [SIZE] [PORT] [SEARCH_MODE] [MAX_HISTORIES] [TOP_K] [MAX_CONTEXT_CHARS] [PROMPT_MODE] [GPU_ID]
+#   bash run_personamem_v2_replay.sh DB_RUN_ID OUT_RUN_ID HISTORY_START MAX_Q [SIZE] [PORT] [SEARCH_MODE] [MAX_HISTORIES] [TOP_K] [MAX_CONTEXT_CHARS] [PROMPT_MODE] [GPU_ID] [MEMORY_POLICY]
 set -euo pipefail
 
 DB_RUN_ID=${1:?DB_RUN_ID is required}
@@ -18,6 +18,7 @@ TOP_K=${9:-50}
 MAX_CONTEXT_CHARS=${10:-0}
 PROMPT_MODE=${11:-qwen_user_final}
 GPU_ID=${12:-}
+MEMORY_POLICY=${13:-standard}
 
 ROOT=/home/ldf/benchmark_lycheemem/PersonaMemV2
 LM_DIR=/home/ldf/benchmark_lycheemem/BEAM/lycheemem_code
@@ -97,6 +98,7 @@ PYTHONHASHSEED=0 python -u run_personamem_v2_lycheemem.py \
   --ingest_workers 4 \
   --search_mode "$SEARCH_MODE" \
   --prompt_mode "$PROMPT_MODE" \
+  --memory_policy "$MEMORY_POLICY" \
   --output_dir "$ROOT/outputs" \
   --run_id "$OUT_RUN_ID" \
   --skip_ingest
