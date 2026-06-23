@@ -3,7 +3,7 @@
 # answering without re-ingesting history.
 #
 # Usage:
-#   bash run_personamem_v2_replay.sh DB_RUN_ID OUT_RUN_ID HISTORY_START MAX_Q [SIZE] [PORT] [SEARCH_MODE] [MAX_HISTORIES] [TOP_K]
+#   bash run_personamem_v2_replay.sh DB_RUN_ID OUT_RUN_ID HISTORY_START MAX_Q [SIZE] [PORT] [SEARCH_MODE] [MAX_HISTORIES] [TOP_K] [MAX_CONTEXT_CHARS] [PROMPT_MODE] [GPU_ID]
 set -euo pipefail
 
 DB_RUN_ID=${1:?DB_RUN_ID is required}
@@ -15,6 +15,9 @@ PORT=${6:-8010}
 SEARCH_MODE=${7:-query}
 MAX_HISTORIES=${8:-1}
 TOP_K=${9:-50}
+MAX_CONTEXT_CHARS=${10:-0}
+PROMPT_MODE=${11:-qwen_user_final}
+GPU_ID=${12:-}
 
 ROOT=/home/ldf/benchmark_lycheemem/PersonaMemV2
 LM_DIR=/home/ldf/benchmark_lycheemem/BEAM/lycheemem_code
@@ -35,6 +38,9 @@ if lsof -ti tcp:"$PORT" >/dev/null 2>&1; then
 fi
 
 cd "$LM_DIR"
+if [ -n "$GPU_ID" ]; then
+  export CUDA_VISIBLE_DEVICES="$GPU_ID"
+fi
 API_PORT="$PORT" \
 SQLITE_DB_PATH="$RUN_DATA/sessions.db" \
 COMPACT_MEMORY_DB_PATH="$RUN_DATA/compact.db" \
@@ -86,9 +92,11 @@ PYTHONHASHSEED=0 python -u run_personamem_v2_lycheemem.py \
   --reader_url "http://10.251.171.6:28043/v1" \
   --reader_model "my-llm-qwen" \
   --top_k "$TOP_K" \
+  --max_context_chars "$MAX_CONTEXT_CHARS" \
   --turns_per_session 12 \
   --ingest_workers 4 \
   --search_mode "$SEARCH_MODE" \
+  --prompt_mode "$PROMPT_MODE" \
   --output_dir "$ROOT/outputs" \
   --run_id "$OUT_RUN_ID" \
   --skip_ingest

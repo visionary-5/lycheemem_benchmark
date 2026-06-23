@@ -2,7 +2,7 @@
 # Start an isolated LycheeMem process and run a PersonaMem-v2 slice.
 #
 # Usage:
-#   bash run_personamem_v2_isolated.sh RUN_ID HISTORY_START MAX_HISTORIES MAX_Q_PER_HISTORY SIZE [PORT] [TOP_K]
+#   bash run_personamem_v2_isolated.sh RUN_ID HISTORY_START MAX_HISTORIES MAX_Q_PER_HISTORY SIZE [PORT] [TOP_K] [MAX_CONTEXT_CHARS] [SEARCH_MODE] [PROMPT_MODE] [GPU_ID]
 #
 # This script does not remove the main lycheemem_code/data directory. It writes
 # per-run DB/vector/log files under ./lychee_runs/RUN_ID and stops only the
@@ -16,6 +16,10 @@ MAX_Q=${4:-20}
 SIZE=${5:-32k}
 PORT=${6:-8010}
 TOP_K=${7:-50}
+MAX_CONTEXT_CHARS=${8:-0}
+SEARCH_MODE=${9:-query}
+PROMPT_MODE=${10:-qwen_user_final}
+GPU_ID=${11:-}
 
 ROOT=/home/ldf/benchmark_lycheemem/PersonaMemV2
 LM_DIR=/home/ldf/benchmark_lycheemem/BEAM/lycheemem_code
@@ -33,6 +37,9 @@ if lsof -ti tcp:"$PORT" >/dev/null 2>&1; then
 fi
 
 cd "$LM_DIR"
+if [ -n "$GPU_ID" ]; then
+  export CUDA_VISIBLE_DEVICES="$GPU_ID"
+fi
 API_PORT="$PORT" \
 SQLITE_DB_PATH="$RUN_DATA/sessions.db" \
 COMPACT_MEMORY_DB_PATH="$RUN_DATA/compact.db" \
@@ -83,8 +90,10 @@ PYTHONHASHSEED=0 python -u run_personamem_v2_lycheemem.py \
   --reader_url "http://10.251.171.6:28043/v1" \
   --reader_model "my-llm-qwen" \
   --top_k "$TOP_K" \
+  --max_context_chars "$MAX_CONTEXT_CHARS" \
   --turns_per_session 12 \
   --ingest_workers 4 \
-  --search_mode query \
+  --search_mode "$SEARCH_MODE" \
+  --prompt_mode "$PROMPT_MODE" \
   --output_dir "$ROOT/outputs" \
   --run_id "$RUN_ID"

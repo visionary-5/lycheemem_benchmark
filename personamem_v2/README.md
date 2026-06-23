@@ -6,16 +6,23 @@ Scope:
 
 - System under test stays unchanged: no edits to `lycheemem_code`.
 - Main metric is official-style MCQ micro accuracy: `correct / total`.
-- Default retrieval query is the user query only. `--search_mode query_options`
-  is available as an ablation, not the clean headline number.
+- Default retrieval query is the official question text, including the official
+  recall suffix. `--search_mode query_raw` uses only the raw user query.
+  Option-aware modes are available for visible-input retrieval ablations, but
+  should be reported separately from the conservative question-only result.
 - For clean runs, use an isolated LycheeMem process with its own DB/vector paths.
 - MCQ prompt text, recall suffix, option construction, and answer extraction are
   aligned with the official `inference.py`. The local Qwen endpoint rejects a
-  final `system` message, so the current compatibility mode appends the official
-  MCQ instruction to the final `user` message. Use the exact official message
-  order again when running against an API/model that accepts it.
+  final `system` message, so `--prompt_mode qwen_user_final` appends the
+  official MCQ instruction to the final `user` message. Use
+  `--prompt_mode official_system_final` when running against an API/model that
+  accepts the exact official message order.
 - Wrapper scripts set `PYTHONHASHSEED=0` because official option shuffling uses
   Python `hash()`.
+- Wrapper scripts do not pin a GPU by default. Pass the optional trailing
+  `GPU_ID` argument to set `CUDA_VISIBLE_DEVICES` for the LycheeMem server
+  process. The reader model is called through the configured OpenAI-compatible
+  endpoint and does not use this server's A100s.
 
 ## Files
 
@@ -25,8 +32,11 @@ Scope:
 | `run_personamem_v2_lycheemem.py` | Ingest one or more histories, answer MCQ rows, save JSONL results. |
 | `run_personamem_v2_reader_baseline.py` | Reader-only baselines: no memory, system persona only, or full history. |
 | `summarize_personamem_v2.py` | Summarize prediction JSONL files into accuracy tables. |
+| `compare_personamem_v2_runs.py` | Compare multiple prediction sets on overlapping `row_index` values. |
 | `run_personamem_v2_isolated.sh` | Start an isolated LycheeMem server on a chosen port and run a small slice. |
 | `run_personamem_v2_replay.sh` | Reuse an existing isolated DB/vector and rerun answering with new reader/retrieval parameters. |
+| `run_personamem_v2_batch.sh` | Run isolated per-history slices in parallel workers. |
+| `run_personamem_v2_replay_batch.sh` | Replay already-ingested histories in parallel for parameter sweeps. |
 
 ## Server Quick Start
 
@@ -57,6 +67,52 @@ bash run_personamem_v2_replay.sh \
   0 5 32k 8010 query 1 10
 ```
 
+The replay wrapper accepts optional trailing parameters:
+
+```bash
+bash run_personamem_v2_replay.sh \
+  DB_RUN_ID OUT_RUN_ID HISTORY_START MAX_Q SIZE PORT SEARCH_MODE MAX_HISTORIES \
+  TOP_K MAX_CONTEXT_CHARS PROMPT_MODE GPU_ID
+```
+
+For example, pin a replay worker to GPU 2:
+
+```bash
+bash run_personamem_v2_replay.sh \
+  pmv2_h0_q5_official_userfinal_k20 \
+  pmv2_h0_q5_query_raw_k20_gpu2 \
+  0 5 32k 8010 query_raw 1 20 0 qwen_user_final 2
+```
+
+Search modes:
+
+- `query`: official question plus recall suffix.
+- `query_raw`: raw user query only.
+- `query_options`: official question plus visible MCQ options.
+- `query_raw_options`: raw user query plus visible MCQ options.
+- `query_metadata` / `query_metadata_options`: diagnostic only; these use CSV
+  metadata fields and should not be headline results unless the paper protocol
+  explicitly includes them.
+
+Replay a 40-history / 200-question parameter check:
+
+```bash
+bash run_personamem_v2_replay_batch.sh \
+  0 39 5 32k 20 query_raw_options 8040 3 \
+  pmv2_replay_h0_h39_q5_query_raw_options_k20 0 qwen_user_final 2
+```
+
+The last argument pins each worker's LycheeMem server to GPU 2. Omit it to use
+the default visible device set.
+
+Compare two parameter runs on the same rows:
+
+```bash
+python compare_personamem_v2_runs.py \
+  --run 'query=outputs/pmv2_h*_q5_official_userfinal_k20/predictions.jsonl' \
+  --run 'raw_options=outputs/pmv2_h*_q5_official_userfinal_query_raw_options_k20/predictions.jsonl'
+```
+
 Reader baselines:
 
 ```bash
@@ -76,6 +132,12 @@ Server path: `/home/ldf/benchmark_lycheemem/PersonaMemV2`.
 
 - `outputs/official_userfinal_k20_h0_h9_q5_summary.json`: LycheeMem, 32k,
   first 10 histories x 5 questions, `top_k=20`: `28/50 = 0.560`.
+- `outputs/pmv2_replay_h0_h9_q5_query_raw_options_k20_summary.json`:
+  LycheeMem replay, 32k, first 10 histories x 5 questions, `top_k=20`,
+  `search_mode=query_raw_options`: `30/50 = 0.600`. Treat as a parameter
+  screen; the first 140 rows of the 200-question replay regressed to
+  `66/140 = 0.471`, so this should not be used as a headline config unless the
+  completed 200-question result recovers.
 - `outputs/baseline_none_h0_h3_q5_official_userfinal/summary.json`: no-memory
   baseline on first 4 histories x 5 questions: `4/20 = 0.200`.
 - `outputs/baseline_system_h0_h3_q5_official_userfinal/summary.json`: system

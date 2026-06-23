@@ -219,6 +219,10 @@ def official_question(row: dict[str, str]) -> str:
     return question
 
 
+def raw_question(row: dict[str, str]) -> str:
+    return parse_user_query(row.get("user_query", ""))["content"]
+
+
 def make_options(row: dict[str, str], question: str) -> tuple[str, dict[str, str], str]:
     correct = str(row.get("correct_answer") or "")
     incorrect = parse_incorrect_answers(row.get("incorrect_answers", "[]"))
@@ -273,21 +277,74 @@ def build_mcq_instruction(option_text: str) -> str:
     )
 
 
-def build_reader_messages(context: str, user_query: str, option_text: str) -> list[dict[str, str]]:
+def build_reader_messages(
+    context: str,
+    user_query: str,
+    option_text: str,
+    *,
+    prompt_mode: str,
+) -> list[dict[str, str]]:
     if not context.strip():
         context = "(No relevant memory found)"
     instruction = build_mcq_instruction(option_text)
-    return [
-        {
-            "role": "system",
-            "content": (
-                "Relevant conversation history has been compressed into the memory context below. "
-                "Use it as the available conversation context for personalization.\n\n"
-                f"{context}"
-            ),
-        },
-        {"role": "user", "content": f"{user_query}\n\n{instruction}"},
-    ]
+    memory_message = {
+        "role": "system",
+        "content": (
+            "Relevant conversation history has been compressed into the memory context below. "
+            "Use it as the available conversation context for personalization.\n\n"
+            f"{context}"
+        ),
+    }
+    if prompt_mode == "qwen_user_final":
+        return [
+            memory_message,
+            {"role": "user", "content": f"{user_query}\n\n{instruction}"},
+        ]
+    if prompt_mode == "official_system_final":
+        return [
+            memory_message,
+            {"role": "user", "content": user_query},
+            {"role": "system", "content": instruction},
+        ]
+    raise ValueError(f"Unknown prompt_mode: {prompt_mode}")
+
+
+def build_search_query(
+    row: dict[str, str],
+    *,
+    question: str,
+    raw_query: str,
+    option_text: str,
+    search_mode: str,
+) -> str:
+    if search_mode == "query":
+        return question
+    if search_mode == "query_raw":
+        return raw_query
+    if search_mode == "query_options":
+        return f"{question}\n\nCandidate responses:\n{option_text}"
+    if search_mode == "query_raw_options":
+        return f"{raw_query}\n\nCandidate responses:\n{option_text}"
+
+    metadata_parts = []
+    for key, label in [
+        ("topic_query", "Topic"),
+        ("conversation_scenario", "Scenario"),
+    ]:
+        value = str(row.get(key) or "").strip()
+        if value:
+            metadata_parts.append(f"{label}: {value}")
+    metadata = "\n".join(metadata_parts)
+
+    if search_mode == "query_metadata":
+        return "\n\n".join(part for part in [raw_query, metadata] if part)
+    if search_mode == "query_metadata_options":
+        return "\n\n".join(
+            part
+            for part in [raw_query, metadata, f"Candidate responses:\n{option_text}"]
+            if part
+        )
+    raise ValueError(f"Unknown search_mode: {search_mode}")
 
 
 def call_reader(client: OpenAI, model: str, messages: list[dict[str, str]], max_tokens: int = 4096) -> str:
@@ -441,17 +498,23 @@ def answer_row(
     top_k: int,
     search_mode: str,
     max_context_chars: int,
+    prompt_mode: str,
 ) -> dict[str, Any]:
     question = official_question(row)
+    raw_query = raw_question(row)
     option_text, option_mapping, correct_letter = make_options(row, question)
-    search_query = question
-    if search_mode == "query_options":
-        search_query = f"{question}\n\nCandidate responses:\n{option_text}"
+    search_query = build_search_query(
+        row,
+        question=question,
+        raw_query=raw_query,
+        option_text=option_text,
+        search_mode=search_mode,
+    )
     search_resp = search_memory(url, search_query, top_k=top_k)
     context = search_resp.get("raw_retrieved_context") or ""
     if max_context_chars and len(context) > max_context_chars:
         context = context[:max_context_chars]
-    messages = build_reader_messages(context, question, option_text)
+    messages = build_reader_messages(context, question, option_text, prompt_mode=prompt_mode)
     response = call_reader(client, model, messages)
     pred_letter = extract_answer_letter(response, option_mapping)
     is_correct = pred_letter == correct_letter
@@ -477,9 +540,10 @@ def answer_row(
         "retrieved_total": search_resp.get("total", 0),
         "retrieved_context_chars": len(context),
         "search_mode": search_mode,
+        "search_query_chars": len(search_query),
         "top_k": top_k,
         "max_context_chars": max_context_chars,
-        "prompt_mode": "official_mcq_text_qwen_user_final",
+        "prompt_mode": prompt_mode,
         "option_seed_mode": "official_python_hash",
     }
 
@@ -526,7 +590,23 @@ def main() -> None:
     ap.add_argument("--reader_api_key", default="dummy")
     ap.add_argument("--top_k", type=int, default=50)
     ap.add_argument("--max_context_chars", type=int, default=0)
-    ap.add_argument("--search_mode", choices=["query", "query_options"], default="query")
+    ap.add_argument(
+        "--prompt_mode",
+        choices=["qwen_user_final", "official_system_final"],
+        default="qwen_user_final",
+    )
+    ap.add_argument(
+        "--search_mode",
+        choices=[
+            "query",
+            "query_raw",
+            "query_options",
+            "query_raw_options",
+            "query_metadata",
+            "query_metadata_options",
+        ],
+        default="query",
+    )
     ap.add_argument("--clear_before_ingest", action="store_true")
     ap.add_argument("--skip_ingest", action="store_true")
     ap.add_argument("--output_dir", default="./outputs")
@@ -575,7 +655,10 @@ def main() -> None:
                 "benchmark_file": str(benchmark_file),
                 "rows": len(rows),
                 "histories": history_keys,
-                "prompt_mode": "official_mcq_text_qwen_user_final",
+                "prompt_mode": args.prompt_mode,
+                "search_mode": args.search_mode,
+                "top_k": args.top_k,
+                "max_context_chars": args.max_context_chars,
                 "option_seed_mode": "official_python_hash",
                 "python_hash_seed": os.environ.get("PYTHONHASHSEED", ""),
             },
@@ -631,6 +714,7 @@ def main() -> None:
                         top_k=args.top_k,
                         search_mode=args.search_mode,
                         max_context_chars=args.max_context_chars,
+                        prompt_mode=args.prompt_mode,
                     )
                     result["error"] = ""
                 except Exception as exc:
