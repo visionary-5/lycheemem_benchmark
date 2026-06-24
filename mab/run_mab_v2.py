@@ -256,6 +256,30 @@ def post_process(output_text: str, answer, sub_dataset: str):
         m = calculate_metrics(parsed, answer)
         m["eventqa_recall"] = binary_recall
         return m, {"parsed_output": parsed}
+    elif "detective" in sub_dataset:
+        # detective is multiple-choice; the query prompt asks the model for a JSON object
+        # {"answer":"X. <option text>","reasoning":...}. The model complies, so the raw
+        # output is a JSON blob and exact_match vs the bare gold ("X. <text>") is always 0
+        # even when the chosen option is correct. Unwrap the answer field first (same class
+        # of bug as the ICL 'label:' parse). Also expose a letter-only match (A/B/C/D),
+        # the most robust MCQ口径 since option-text wording can drift while the choice is right.
+        pred_ans = output_text
+        try:
+            pred_ans = json.loads(output_text).get("answer", output_text)
+        except Exception:
+            mobj = re.search(r'"answer"\s*:\s*"([^"]*)"', output_text)
+            if mobj:
+                pred_ans = mobj.group(1)
+        m = calculate_metrics(pred_ans, answer)
+
+        def _letter(s):
+            mm = re.match(r"\s*([A-D])\b", str(s).strip())
+            return mm.group(1) if mm else None
+        gold_list = answer if isinstance(answer, list) else [answer]
+        gold_list = [g for sub in gold_list for g in (sub if isinstance(sub, list) else [sub])]
+        pl = _letter(pred_ans)
+        m["mcq_letter_match"] = int(pl is not None and any(pl == _letter(g) for g in gold_list))
+        return m, {"parsed_output": pred_ans}
     else:
         m = calculate_metrics(output_text, answer)
         parsed = parse_output(output_text)

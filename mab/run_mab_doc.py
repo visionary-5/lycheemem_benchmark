@@ -20,20 +20,32 @@ from openai import OpenAI
 import run_mab_v2 as M
 
 
-def reason_answer_queries(url, context_idx, questions, answers, sub_dataset, mc_time, timeout=180):
+def reason_answer_queries(url, context_idx, questions, answers, sub_dataset, mc_time,
+                          timeout=300, tries=3):
     """Answer via LycheeMem's native /memory/reason endpoint (does its own retrieval
     + reasoning over memory) instead of external search+reader. This is the system's
-    designed QA口径; on ruler it ~doubled substring vs search+reader."""
+    designed QA口径; on ruler it ~doubled substring vs search+reader.
+
+    Retries transient failures (ReadTimeout / non-200) up to `tries` times with backoff:
+    a single ReadTimeout used to score 0, which silently cost points (e.g. FC) in the
+    scan. Mirrors run_format_ab.py:reason_with_retry."""
     results = []
     for qi, (question, answer) in enumerate(zip(questions, answers)):
         t0 = time.time()
-        try:
-            r = requests.post(url + "/memory/reason",
-                              json={"user_query": question, "session_id": f"q_{context_idx}_{qi}",
-                                    "append_to_session": False}, timeout=timeout)
-            prediction = (r.json().get("response") or "").strip() if r.status_code == 200 else f"(reason err {r.status_code})"
-        except Exception as e:
-            prediction = f"(reason exception {type(e).__name__})"
+        prediction = "(reason no-response)"
+        for k in range(tries):
+            try:
+                r = requests.post(url + "/memory/reason",
+                                  json={"user_query": question, "session_id": f"q_{context_idx}_{qi}",
+                                        "append_to_session": False}, timeout=timeout)
+                if r.status_code == 200:
+                    prediction = (r.json().get("response") or "").strip()
+                    break
+                prediction = f"(reason err {r.status_code})"
+            except Exception as e:
+                prediction = f"(reason exception {type(e).__name__})"
+            if k < tries - 1:
+                time.sleep(3 * (k + 1))  # 3s, 6s backoff before retry
         metrics, info = M.post_process(prediction, answer, sub_dataset)
         results.append({"output": prediction, "answer": answer, "query": question,
                         "query_id": qi, "context_id": context_idx,
