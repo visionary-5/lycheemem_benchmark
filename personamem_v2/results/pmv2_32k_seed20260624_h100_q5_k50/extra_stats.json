@@ -1,0 +1,24 @@
+{
+  "overall": {
+    "correct": 240,
+    "total": 500,
+    "accuracy": 0.48
+  },
+  "elapsed_sec_per_question": {
+    "mean": 59.905228516578674,
+    "median": 55.34622275829315,
+    "p95": 109.77199649810791,
+    "max": 208.56331300735474
+  },
+  "retrieved_total": {
+    "mean": 50.0,
+    "min": 50.0,
+    "max": 50.0
+  },
+  "retrieved_context_chars": {
+    "mean": 9407.532,
+    "median": 7818.5,
+    "p95": 18514.0,
+    "max": 41550.0
+  }
+}

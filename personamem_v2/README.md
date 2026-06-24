@@ -33,9 +33,11 @@ Scope:
 | `run_personamem_v2_reader_baseline.py` | Reader-only baselines: no memory, system persona only, or full history. |
 | `summarize_personamem_v2.py` | Summarize prediction JSONL files into accuracy tables. |
 | `compare_personamem_v2_runs.py` | Compare multiple prediction sets on overlapping `row_index` values. |
+| `make_personamem_v2_history_list.py` | Generate a fixed-seed random history-index list for reproducible larger subsets. |
 | `run_personamem_v2_isolated.sh` | Start an isolated LycheeMem server on a chosen port and run a small slice. |
 | `run_personamem_v2_replay.sh` | Reuse an existing isolated DB/vector and rerun answering with new reader/retrieval parameters. |
 | `run_personamem_v2_batch.sh` | Run isolated per-history slices in parallel workers. |
+| `run_personamem_v2_list_batch.sh` | Run isolated per-history slices for an explicit history-index list. |
 | `run_personamem_v2_replay_batch.sh` | Replay already-ingested histories in parallel for parameter sweeps. |
 
 ## Server Quick Start
@@ -109,6 +111,24 @@ bash run_personamem_v2_replay_batch.sh \
 The last argument pins each worker's LycheeMem server to GPU 2. Omit it to use
 the default visible device set.
 
+Generate and run a fixed-seed 500-question subset:
+
+```bash
+python make_personamem_v2_history_list.py \
+  --benchmark_csv ./data/benchmark/text/benchmark.csv \
+  --size 32k \
+  --count 100 \
+  --seed 20260624 \
+  --output ./eval_lists/pmv2_32k_seed20260624_h100.txt \
+  --metadata_output ./eval_lists/pmv2_32k_seed20260624_h100.json
+
+bash run_personamem_v2_list_batch.sh \
+  ./eval_lists/pmv2_32k_seed20260624_h100.txt \
+  5 32k 50 8110 4 \
+  pmv2_32k_seed20260624_h100_q5_k50 \
+  0 query qwen_user_final 1 standard turns
+```
+
 Compare two parameter runs on the same rows:
 
 ```bash
@@ -137,10 +157,19 @@ PYTHONHASHSEED=0 python -u run_personamem_v2_reader_baseline.py \
   --run_id baseline_full_h0_h3_q5
 ```
 
-## Current Smoke Results
+## Current Results
 
 Server path: `/home/ldf/benchmark_lycheemem/PersonaMemV2`.
 
+- Fixed-seed 500-question screened run, 32k text MCQ, 100 random histories x 5
+  questions, seed `20260624`, Qwen reader, `query/top_k=50`, `standard`
+  memory policy, turn ingestion: `240/500 = 0.480`.
+  - Server summary:
+    `outputs/pmv2_32k_seed20260624_h100_q5_k50_final/summary.json`.
+  - Committed local artifacts:
+    `results/pmv2_32k_seed20260624_h100_q5_k50/`.
+  - This is not the official full overall; it is a reproducible medium-scale
+    subset for go/no-go and configuration screening.
 - `outputs/official_userfinal_k20_h0_h9_q5_summary.json`: LycheeMem, 32k,
   first 10 histories x 5 questions, `top_k=20`: `28/50 = 0.560`.
 - First 40 histories x 5 questions, 32k text MCQ, same rows, Qwen reader:
@@ -151,9 +180,10 @@ Server path: `/home/ldf/benchmark_lycheemem/PersonaMemV2`.
   - `query_raw_options`, `top_k=20`: `86/200 = 0.430`. This looked strong on
     the first 50 questions (`30/50 = 0.600`) but regressed badly at 200, so do
     not use it as a headline config.
-- Current best clean screened config is `query/top_k=50`, but the gain is small
-  and still below the PersonaMem-v2 agentic-memory paper anchor, so it needs
-  another 200-question ablation before scaling to 500+ questions.
+- Current best clean screened config is `query/top_k=50`. The 500-question
+  result is above the public Mem0/Zep/Graphiti PersonaMem-v2 memory-system
+  baselines reported by DCPM, but below the PersonaMem-v2 paper's trained
+  agentic-memory anchor.
 - `outputs/baseline_none_h0_h3_q5_official_userfinal/summary.json`: no-memory
   baseline on first 4 histories x 5 questions: `4/20 = 0.200`.
 - `outputs/baseline_system_h0_h3_q5_official_userfinal/summary.json`: system

@@ -1,0 +1,925 @@
+{
+  "created_at": "2026-06-24 18:48:48 CST",
+  "history_list": "/home/ldf/benchmark_lycheemem/PersonaMemV2/eval_lists/pmv2_32k_seed20260624_h100.txt",
+  "histories": 100,
+  "questions_per_history": 5,
+  "total_rows": 500,
+  "config": {
+    "size": "32k",
+    "top_k": 50,
+    "search_mode": "query",
+    "prompt_mode": "qwen_user_final",
+    "memory_policy": "standard",
+    "ingest_mode": "turns",
+    "reader_model": "my-llm-qwen",
+    "reader_extra_body": {
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "option_seed_mode": "official_python_hash",
+    "python_hash_seed": 0
+  },
+  "runs": [
+    {
+      "history_index": 0,
+      "run_id": "pmv2_h0_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h0_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h0_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782271078.8306973
+    },
+    {
+      "history_index": 3,
+      "run_id": "pmv2_h3_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h3_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h3_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 0,
+      "mtime": 1782271308.7291691
+    },
+    {
+      "history_index": 4,
+      "run_id": "pmv2_h4_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h4_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h4_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782271216.5001886
+    },
+    {
+      "history_index": 8,
+      "run_id": "pmv2_h8_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h8_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h8_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782271278.2808468
+    },
+    {
+      "history_index": 9,
+      "run_id": "pmv2_h9_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h9_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h9_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782272062.172867
+    },
+    {
+      "history_index": 10,
+      "run_id": "pmv2_h10_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h10_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h10_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782272230.3385453
+    },
+    {
+      "history_index": 11,
+      "run_id": "pmv2_h11_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h11_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h11_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782272303.6552749
+    },
+    {
+      "history_index": 12,
+      "run_id": "pmv2_h12_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h12_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h12_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782272184.6900907
+    },
+    {
+      "history_index": 15,
+      "run_id": "pmv2_h15_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h15_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h15_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782273112.852066
+    },
+    {
+      "history_index": 17,
+      "run_id": "pmv2_h17_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h17_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h17_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782273119.4041343
+    },
+    {
+      "history_index": 19,
+      "run_id": "pmv2_h19_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h19_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h19_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782273125.0081925
+    },
+    {
+      "history_index": 20,
+      "run_id": "pmv2_h20_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h20_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h20_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782272990.3867853
+    },
+    {
+      "history_index": 22,
+      "run_id": "pmv2_h22_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h22_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h22_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782273985.456985
+    },
+    {
+      "history_index": 23,
+      "run_id": "pmv2_h23_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h23_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h23_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782274009.613229
+    },
+    {
+      "history_index": 24,
+      "run_id": "pmv2_h24_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h24_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h24_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782273964.8207762
+    },
+    {
+      "history_index": 25,
+      "run_id": "pmv2_h25_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h25_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h25_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782273761.6067176
+    },
+    {
+      "history_index": 26,
+      "run_id": "pmv2_h26_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h26_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h26_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782274799.2815745
+    },
+    {
+      "history_index": 28,
+      "run_id": "pmv2_h28_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h28_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h28_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782274941.1741881
+    },
+    {
+      "history_index": 29,
+      "run_id": "pmv2_h29_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h29_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h29_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782274851.3497818
+    },
+    {
+      "history_index": 33,
+      "run_id": "pmv2_h33_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h33_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h33_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782274578.832988
+    },
+    {
+      "history_index": 35,
+      "run_id": "pmv2_h35_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h35_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h35_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782275679.4749215
+    },
+    {
+      "history_index": 36,
+      "run_id": "pmv2_h36_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h36_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h36_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782275882.4844503
+    },
+    {
+      "history_index": 37,
+      "run_id": "pmv2_h37_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h37_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h37_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782275689.8949986
+    },
+    {
+      "history_index": 41,
+      "run_id": "pmv2_h41_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h41_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h41_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782277224.9963686
+    },
+    {
+      "history_index": 43,
+      "run_id": "pmv2_h43_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h43_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h43_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782276856.3357162
+    },
+    {
+      "history_index": 45,
+      "run_id": "pmv2_h45_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h45_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h45_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 0,
+      "mtime": 1782276956.3450654
+    },
+    {
+      "history_index": 47,
+      "run_id": "pmv2_h47_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h47_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h47_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782276795.3188515
+    },
+    {
+      "history_index": 48,
+      "run_id": "pmv2_h48_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h48_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h48_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 0,
+      "mtime": 1782278698.9624734
+    },
+    {
+      "history_index": 51,
+      "run_id": "pmv2_h51_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h51_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h51_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782277998.6285443
+    },
+    {
+      "history_index": 52,
+      "run_id": "pmv2_h52_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h52_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h52_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782278149.18203
+    },
+    {
+      "history_index": 53,
+      "run_id": "pmv2_h53_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h53_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h53_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782277973.5762954
+    },
+    {
+      "history_index": 54,
+      "run_id": "pmv2_h54_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h54_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h54_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782280028.7528968
+    },
+    {
+      "history_index": 57,
+      "run_id": "pmv2_h57_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h57_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h57_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782278898.9078035
+    },
+    {
+      "history_index": 62,
+      "run_id": "pmv2_h62_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h62_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h62_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782279167.745796
+    },
+    {
+      "history_index": 63,
+      "run_id": "pmv2_h63_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h63_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h63_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782278859.8515315
+    },
+    {
+      "history_index": 65,
+      "run_id": "pmv2_h65_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h65_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h65_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782281051.9109933
+    },
+    {
+      "history_index": 68,
+      "run_id": "pmv2_h68_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h68_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h68_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782279860.7434666
+    },
+    {
+      "history_index": 69,
+      "run_id": "pmv2_h69_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h69_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h69_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 0,
+      "mtime": 1782280318.2673838
+    },
+    {
+      "history_index": 72,
+      "run_id": "pmv2_h72_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h72_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h72_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782279847.0553505
+    },
+    {
+      "history_index": 73,
+      "run_id": "pmv2_h73_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h73_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h73_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782282332.6065495
+    },
+    {
+      "history_index": 76,
+      "run_id": "pmv2_h76_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h76_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h76_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782280849.763707
+    },
+    {
+      "history_index": 81,
+      "run_id": "pmv2_h81_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h81_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h81_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782281538.765555
+    },
+    {
+      "history_index": 83,
+      "run_id": "pmv2_h83_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h83_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h83_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782280702.3289616
+    },
+    {
+      "history_index": 85,
+      "run_id": "pmv2_h85_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h85_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h85_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782283057.7450087
+    },
+    {
+      "history_index": 86,
+      "run_id": "pmv2_h86_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h86_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h86_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782281909.1538908
+    },
+    {
+      "history_index": 87,
+      "run_id": "pmv2_h87_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h87_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h87_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782282652.6608787
+    },
+    {
+      "history_index": 88,
+      "run_id": "pmv2_h88_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h88_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h88_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 0,
+      "mtime": 1782282265.577825
+    },
+    {
+      "history_index": 90,
+      "run_id": "pmv2_h90_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h90_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h90_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782283992.88632
+    },
+    {
+      "history_index": 91,
+      "run_id": "pmv2_h91_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h91_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h91_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782283377.8463695
+    },
+    {
+      "history_index": 92,
+      "run_id": "pmv2_h92_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h92_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h92_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782283685.924208
+    },
+    {
+      "history_index": 93,
+      "run_id": "pmv2_h93_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h93_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h93_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782283157.037348
+    },
+    {
+      "history_index": 96,
+      "run_id": "pmv2_h96_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h96_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h96_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782285059.5662227
+    },
+    {
+      "history_index": 97,
+      "run_id": "pmv2_h97_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h97_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h97_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782284678.8721092
+    },
+    {
+      "history_index": 98,
+      "run_id": "pmv2_h98_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h98_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h98_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782284565.926619
+    },
+    {
+      "history_index": 103,
+      "run_id": "pmv2_h103_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h103_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h103_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782284036.4866347
+    },
+    {
+      "history_index": 105,
+      "run_id": "pmv2_h105_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h105_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h105_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 5,
+      "mtime": 1782285807.1589699
+    },
+    {
+      "history_index": 107,
+      "run_id": "pmv2_h107_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h107_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h107_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782285705.1699014
+    },
+    {
+      "history_index": 110,
+      "run_id": "pmv2_h110_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h110_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h110_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782285703.7498863
+    },
+    {
+      "history_index": 111,
+      "run_id": "pmv2_h111_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h111_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h111_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782285097.7387452
+    },
+    {
+      "history_index": 118,
+      "run_id": "pmv2_h118_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h118_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h118_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782286712.7727356
+    },
+    {
+      "history_index": 120,
+      "run_id": "pmv2_h120_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h120_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h120_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782286833.944378
+    },
+    {
+      "history_index": 124,
+      "run_id": "pmv2_h124_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h124_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h124_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782286718.3489141
+    },
+    {
+      "history_index": 126,
+      "run_id": "pmv2_h126_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h126_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h126_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782285881.4477346
+    },
+    {
+      "history_index": 129,
+      "run_id": "pmv2_h129_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h129_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h129_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782287931.7015772
+    },
+    {
+      "history_index": 130,
+      "run_id": "pmv2_h130_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h130_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h130_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 5,
+      "mtime": 1782287594.4523077
+    },
+    {
+      "history_index": 131,
+      "run_id": "pmv2_h131_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h131_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h131_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 0,
+      "mtime": 1782287615.1686487
+    },
+    {
+      "history_index": 135,
+      "run_id": "pmv2_h135_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h135_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h135_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782286865.6012542
+    },
+    {
+      "history_index": 136,
+      "run_id": "pmv2_h136_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h136_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h136_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782288867.2881615
+    },
+    {
+      "history_index": 138,
+      "run_id": "pmv2_h138_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h138_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h138_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 0,
+      "mtime": 1782288490.8135219
+    },
+    {
+      "history_index": 143,
+      "run_id": "pmv2_h143_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h143_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h143_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782288465.6691763
+    },
+    {
+      "history_index": 145,
+      "run_id": "pmv2_h145_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h145_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h145_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782287913.2373016
+    },
+    {
+      "history_index": 148,
+      "run_id": "pmv2_h148_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h148_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h148_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782289657.11178
+    },
+    {
+      "history_index": 150,
+      "run_id": "pmv2_h150_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h150_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h150_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782289843.5614157
+    },
+    {
+      "history_index": 151,
+      "run_id": "pmv2_h151_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h151_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h151_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782289614.7394316
+    },
+    {
+      "history_index": 152,
+      "run_id": "pmv2_h152_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h152_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h152_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782288845.3762035
+    },
+    {
+      "history_index": 154,
+      "run_id": "pmv2_h154_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h154_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h154_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782290607.7851086
+    },
+    {
+      "history_index": 156,
+      "run_id": "pmv2_h156_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h156_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h156_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782290820.0897245
+    },
+    {
+      "history_index": 158,
+      "run_id": "pmv2_h158_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h158_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h158_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782290639.6654477
+    },
+    {
+      "history_index": 159,
+      "run_id": "pmv2_h159_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h159_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h159_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782290110.8479757
+    },
+    {
+      "history_index": 160,
+      "run_id": "pmv2_h160_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h160_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h160_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782291744.5628798
+    },
+    {
+      "history_index": 162,
+      "run_id": "pmv2_h162_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h162_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h162_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782292558.9974027
+    },
+    {
+      "history_index": 164,
+      "run_id": "pmv2_h164_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h164_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h164_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782291679.8508453
+    },
+    {
+      "history_index": 165,
+      "run_id": "pmv2_h165_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h165_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h165_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782291220.8482041
+    },
+    {
+      "history_index": 169,
+      "run_id": "pmv2_h169_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h169_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h169_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782292883.2154057
+    },
+    {
+      "history_index": 171,
+      "run_id": "pmv2_h171_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h171_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h171_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782294341.9313138
+    },
+    {
+      "history_index": 172,
+      "run_id": "pmv2_h172_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h172_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h172_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782292838.6468527
+    },
+    {
+      "history_index": 174,
+      "run_id": "pmv2_h174_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h174_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h174_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782292015.8353813
+    },
+    {
+      "history_index": 176,
+      "run_id": "pmv2_h176_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h176_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h176_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782294190.6143148
+    },
+    {
+      "history_index": 177,
+      "run_id": "pmv2_h177_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h177_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h177_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782295111.0138807
+    },
+    {
+      "history_index": 178,
+      "run_id": "pmv2_h178_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h178_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h178_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782293670.3146718
+    },
+    {
+      "history_index": 183,
+      "run_id": "pmv2_h183_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h183_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h183_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 1,
+      "mtime": 1782292970.7164257
+    },
+    {
+      "history_index": 184,
+      "run_id": "pmv2_h184_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h184_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h184_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782295055.104406
+    },
+    {
+      "history_index": 186,
+      "run_id": "pmv2_h186_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h186_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h186_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782295871.5118794
+    },
+    {
+      "history_index": 188,
+      "run_id": "pmv2_h188_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h188_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h188_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782294548.2286513
+    },
+    {
+      "history_index": 189,
+      "run_id": "pmv2_h189_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h189_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h189_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782294234.4466062
+    },
+    {
+      "history_index": 190,
+      "run_id": "pmv2_h190_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h190_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h190_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782295841.479455
+    },
+    {
+      "history_index": 191,
+      "run_id": "pmv2_h191_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h191_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h191_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 4,
+      "mtime": 1782296577.5446997
+    },
+    {
+      "history_index": 192,
+      "run_id": "pmv2_h192_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h192_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h192_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 2,
+      "mtime": 1782295280.4578328
+    },
+    {
+      "history_index": 193,
+      "run_id": "pmv2_h193_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h193_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h193_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782295096.6375108
+    },
+    {
+      "history_index": 196,
+      "run_id": "pmv2_h196_q5_official_userfinal_k50",
+      "predictions": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h196_q5_official_userfinal_k50/predictions.jsonl",
+      "summary": "/home/ldf/benchmark_lycheemem/PersonaMemV2/outputs/pmv2_h196_q5_official_userfinal_k50/summary.json",
+      "rows": 5,
+      "correct": 3,
+      "mtime": 1782296567.748587
+    }
+  ]
+}

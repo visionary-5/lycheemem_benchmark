@@ -1,0 +1,487 @@
+{
+  "overall": {
+    "correct": 240,
+    "total": 500,
+    "accuracy": 0.48,
+    "avg_retrieved_total": 50.0,
+    "avg_retrieved_context_chars": 9407.532
+  },
+  "breakdowns": {
+    "pref_type": [
+      {
+        "value": "stereotypical_pref",
+        "correct": 41,
+        "total": 64,
+        "accuracy": 0.640625
+      },
+      {
+        "value": "ask_to_forget",
+        "correct": 68,
+        "total": 135,
+        "accuracy": 0.5037037037037037
+      },
+      {
+        "value": "neutral_preferences",
+        "correct": 33,
+        "total": 68,
+        "accuracy": 0.4852941176470588
+      },
+      {
+        "value": "therapy_background",
+        "correct": 33,
+        "total": 69,
+        "accuracy": 0.4782608695652174
+      },
+      {
+        "value": "anti_stereotypical_pref",
+        "correct": 34,
+        "total": 79,
+        "accuracy": 0.43037974683544306
+      },
+      {
+        "value": "health_and_medical_conditions",
+        "correct": 15,
+        "total": 39,
+        "accuracy": 0.38461538461538464
+      },
+      {
+        "value": "sensitive_info",
+        "correct": 16,
+        "total": 46,
+        "accuracy": 0.34782608695652173
+      }
+    ],
+    "updated": [
+      {
+        "value": "True",
+        "correct": 68,
+        "total": 135,
+        "accuracy": 0.5037037037037037
+      },
+      {
+        "value": "False",
+        "correct": 172,
+        "total": 365,
+        "accuracy": 0.4712328767123288
+      }
+    ],
+    "who": [
+      {
+        "value": "self",
+        "correct": 224,
+        "total": 446,
+        "accuracy": 0.5022421524663677
+      },
+      {
+        "value": "others",
+        "correct": 16,
+        "total": 54,
+        "accuracy": 0.2962962962962963
+      }
+    ],
+    "sensitive_info": [
+      {
+        "value": "False",
+        "correct": 224,
+        "total": 454,
+        "accuracy": 0.4933920704845815
+      },
+      {
+        "value": "True",
+        "correct": 16,
+        "total": 46,
+        "accuracy": 0.34782608695652173
+      }
+    ],
+    "conversation_scenario": [
+      {
+        "value": "professional_writing",
+        "correct": 9,
+        "total": 14,
+        "accuracy": 0.6428571428571429
+      },
+      {
+        "value": "creative_writing",
+        "correct": 40,
+        "total": 75,
+        "accuracy": 0.5333333333333333
+      },
+      {
+        "value": "professional_email",
+        "correct": 78,
+        "total": 157,
+        "accuracy": 0.4968152866242038
+      },
+      {
+        "value": "personal_email",
+        "correct": 113,
+        "total": 254,
+        "accuracy": 0.4448818897637795
+      }
+    ],
+    "topic_query": [
+      {
+        "value": "Activism",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Backup",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Beauty",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Clothing",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Collecting",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Decor",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Decorating",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Drinks",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Education",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Gifting",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "HomeDecor",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Journaling",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Lifestyle",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Literature",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Memorials",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Organization",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Poetry",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Politics",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Relaxation",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Security",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Self-improvement",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Volunteering",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Wellbeing",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Workspaces",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "decor",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "fundraising",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "insurance",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "mentorship",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "outdoors",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "payments",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    ],
+    "topic_preference": [
+      {
+        "value": "Amusement",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Anime",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Astronomy",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Beauty",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Beer",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "BodyModification",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Business",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Candles",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Caregiving",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Charity",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Communication",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Crime",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Cycling",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "DIY",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Decor",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Decorating",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Design",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Equality",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Festivals",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Fishing",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Fitness",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Games",
+        "correct": 3,
+        "total": 3,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Home",
+        "correct": 7,
+        "total": 7,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Homesickness",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Law",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Materialism",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Minimalism",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Museums",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Painting",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      {
+        "value": "Patriotism",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    ]
+  }
+}
