@@ -2,6 +2,8 @@
 
 External adapter for running LycheeMem dev5 on PersonaMem-v2 MCQ evaluation.
 
+See `RESULTS.md` for the current 500-question run summary and horizontal read.
+
 Scope:
 
 - System under test stays unchanged: no edits to `lycheemem_code`.
