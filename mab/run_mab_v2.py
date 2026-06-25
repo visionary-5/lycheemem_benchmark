@@ -89,8 +89,15 @@ BASE_TEMPLATES = {
     },
     "recsys": {
         "system": SYSTEM_MESSAGE,
-        "memorize": 'Dialogue between User and Assistant {time_stamp} \\n<User> The following context is the movie recommendation conversation and catalog: \n{context}\n <Assistant> I have memorized it and I will answer the question you ask.',
-        "query": "{question}",
+        "memorize": 'Dialogue between User and Assistant {time_stamp} \\n<User> The following context is the dialogues between a user and recommender system: \n{context}\n <Assistant> I have memorized the dialogues and I will answer the question you ask.',
+        # Official MABench recsys_redial rag_agent template: elicit a numbered list of 20
+        # movie recommendations so eval can parse "1.movie\n2.movie..." and match candidates.
+        "query": ("Pretend you are a movie recommender system. You need to recommend movies based on "
+                  "the dialogues you have memorized. Now I will give you a new conversation between a "
+                  "user and you (a recommender system). Based on the conversation, you reply me with 20 "
+                  "recommendations without extra sentences. \n\nFor Example:\n\n[Conversation]\n\nThe "
+                  "recommendations are: \n1.movie1\n2.movie2\n...\n\n Here is the conversation: {question} "
+                  "\n\n The recommendations are: \n"),
     },
 }
 
